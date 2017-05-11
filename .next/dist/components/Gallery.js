@@ -42,6 +42,10 @@ var _GalleryItem = require('./GalleryItem');
 
 var _GalleryItem2 = _interopRequireDefault(_GalleryItem);
 
+var _reactTagsinput = require('react-tagsinput');
+
+var _reactTagsinput2 = _interopRequireDefault(_reactTagsinput);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/home/vagrant/rialto-site/components/Gallery.js';
@@ -104,32 +108,71 @@ var _class = function (_Component) {
         img: '12.jpg',
         type: 2,
         date: 'Сегодня в 10:45'
-      }]
+      }],
+      tags: ['авария', 'кошмар']
     };
     return _this;
   }
 
   (0, _createClass3.default)(_class, [{
+    key: 'handleChange',
+    value: function handleChange(tags) {
+      this.setState({ tags: tags });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 86
         }
       }, _react2.default.createElement(_reactBootstrap.Row, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 88
+        }
+      }, _react2.default.createElement(_reactBootstrap.Col, { md: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
         }
       }, this.state.materials.map(function (material) {
         return _react2.default.createElement(_GalleryItem2.default, (0, _extends3.default)({ key: Math.random() }, material, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82
+            lineNumber: 91
           }
         }));
-      })));
+      })), _react2.default.createElement(_reactBootstrap.Col, { md: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94
+        }
+      }, _react2.default.createElement(_reactBootstrap.Col, { md: 12, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        }
+      }, '\u0422\u0430\u043A\u043E\u0435 \u0442\u043E \u0432\u0438\u0434\u0435\u043E \u0431\u043B\u0430 \u0431\u043B\u0430 \u0431\u043B\u0430', _react2.default.createElement(_reactTagsinput2.default, { value: this.state.tags, onChange: this.handleChange.bind(this), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        }
+      }), _react2.default.createElement(_reactBootstrap.Image, { src: 'static/' + '12.jpg', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        }
+      }), this.props.date, _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        }
+      }, _react2.default.createElement(_reactBootstrap.Button, { bsStyle: 'success', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        }
+      }, '\u041E\u0434\u043E\u0431\u0440\u0438\u0442\u044C'), '\xA0', _react2.default.createElement(_reactBootstrap.Button, { bsStyle: 'danger', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102
+        }
+      }, '\u041E\u0442\u043A\u0437\u0430\u0442\u044C'))))));
     }
   }]);
 

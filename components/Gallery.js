@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
-import { Col, Row, PageHeader} from 'react-bootstrap'
+import { Col, Row, PageHeader, Image, Button} from 'react-bootstrap'
 import GalleryItem from './GalleryItem'
+import TagsInput from 'react-tagsinput'
 
 export default class extends Component {
   
@@ -70,19 +71,40 @@ export default class extends Component {
             type: 2,
             date: 'Сегодня в 10:45'
           }
-        ]
+        ],
+        tags: ['авария', 'кошмар']
       }
    }
   
-   render() {
-      return (
-        <div>
 
-          <Row>{ this.state.materials.map(material => {
+  handleChange(tags) {
+    this.setState({tags})
+  }
+
+  render() {
+    return (
+      <div>
+
+        <Row>
+          <Col md={6}>
+            { this.state.materials.map(material => {
               return <GalleryItem key={Math.random()} {...material} />
             }) }
-          </Row>
-        </div>
-      );
-   }
+          </Col>
+          <Col md={6}>
+            <Col md={12} >
+              Такое то видео бла бла бла
+              <TagsInput value={this.state.tags} onChange={this.handleChange.bind(this)} />
+              <Image src={'static/' +   '12.jpg'}></Image>
+              {this.props.date}
+              <div >
+                <Button bsStyle="success">Одобрить</Button>&nbsp;
+                <Button bsStyle="danger">Откзать</Button>
+              </div>
+            </Col>
+          </Col>
+        </Row>
+      </div>
+    );
+  }
 }
