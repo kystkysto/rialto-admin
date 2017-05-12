@@ -20,11 +20,13 @@ export default class extends Component {
   
   render() {
     return (
-      <Col xs={6} md={4} key={Math.random()}>
-        <Thumbnail src={'static/' + this.props.img}>
-          <Glyphicon style={style} glyph={this.type(this.props.type)} />
-          {this.props.date}
-        </Thumbnail>
+      <Col md={6} key={Math.random()}>
+        <Link href={'/material?id=' + 1}>
+          <Thumbnail src={'static/' + this.props.img}>
+            <Glyphicon style={style} glyph={this.type(this.props.type)} />
+            {this.props.date}
+          </Thumbnail>
+        </Link>
       </Col>
     );
   }

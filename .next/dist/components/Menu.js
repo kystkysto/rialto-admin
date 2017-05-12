@@ -57,10 +57,6 @@ var _class = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 15
         }
-      }, _react2.default.createElement(_reactBootstrap.Col, { md: 2, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        }
       }, _react2.default.createElement(_reactBootstrap.Nav, { bsStyle: 'pills', stacked: true, activeKey: 1, __source: {
           fileName: _jsxFileName,
           lineNumber: 17
@@ -89,7 +85,7 @@ var _class = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 25
         }
-      }, '\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438')))));
+      }, '\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438'))));
     }
   }]);
 

@@ -13,7 +13,7 @@ export default class extends Component {
 
     return (
       <div>
-        <Col md={2}>
+        
           <Nav bsStyle="pills" stacked activeKey={1} >
             <Link href="/">
               <NavItem eventKey={1}>Материалы</NavItem>
@@ -25,7 +25,6 @@ export default class extends Component {
               <NavItem eventKey={3}>Пользователи</NavItem>
             </Link>
           </Nav>
-        </Col>
       </div>
     )
   }

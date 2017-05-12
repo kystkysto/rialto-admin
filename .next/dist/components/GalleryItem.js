@@ -60,19 +60,23 @@ var _class = function (_Component) {
   (0, _createClass3.default)(_class, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_reactBootstrap.Col, { xs: 6, md: 4, key: Math.random(), __source: {
+      return _react2.default.createElement(_reactBootstrap.Col, { md: 6, key: Math.random(), __source: {
           fileName: _jsxFileName,
           lineNumber: 23
         }
-      }, _react2.default.createElement(_reactBootstrap.Thumbnail, { src: 'static/' + this.props.img, __source: {
+      }, _react2.default.createElement(_link2.default, { href: '/material?id=' + 1, __source: {
           fileName: _jsxFileName,
           lineNumber: 24
         }
-      }, _react2.default.createElement(_reactBootstrap.Glyphicon, { style: style, glyph: this.type(this.props.type), __source: {
+      }, _react2.default.createElement(_reactBootstrap.Thumbnail, { src: 'static/' + this.props.img, __source: {
           fileName: _jsxFileName,
           lineNumber: 25
         }
-      }), this.props.date));
+      }, _react2.default.createElement(_reactBootstrap.Glyphicon, { style: style, glyph: this.type(this.props.type), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        }
+      }), this.props.date)));
     }
   }, {
     key: 'type',

@@ -73,33 +73,28 @@ exports.default = function (_ref) {
       fileName: _jsxFileName,
       lineNumber: 20
     }
-  }, _react2.default.createElement(_reactBootstrap.Navbar, {
+  }, _react2.default.createElement(_reactBootstrap.Row, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     }
-  }, _react2.default.createElement(_reactBootstrap.Navbar.Header, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    }
-  }, _react2.default.createElement(_reactBootstrap.Navbar.Brand, {
+  }), _react2.default.createElement(_reactBootstrap.Row, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     }
-  }, _react2.default.createElement(_link2.default, { href: '/', __source: {
+  }, _react2.default.createElement(_reactBootstrap.Col, { md: 1, __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     }
-  }, 'Rialto')))), _react2.default.createElement(_Menu2.default, {
+  }, _react2.default.createElement(_Menu2.default, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 25
     }
-  }), _react2.default.createElement(_reactBootstrap.Col, { md: 10, __source: {
+  })), _react2.default.createElement(_reactBootstrap.Col, { md: 11, __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 27
     }
-  }, children)));
+  }, children))));
 };

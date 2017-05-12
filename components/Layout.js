@@ -12,25 +12,22 @@ export default ({ children, title = 'Модератор' }) => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
-
+      
       <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css" />
 
-      <link rel="stylesheet" href="/static/react-tagsinput.css" />
+      <link rel="stylesheet" href="/static/react-tagsinput.css" />  
     </Head>
     <Grid fluid>
-      <Navbar>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <Link href="/">Rialto</Link>
-          </Navbar.Brand>
-        </Navbar.Header>
-      </Navbar>
-
-      <Menu />
-      
-      <Col md={10}>
+      <Row>
+      </Row>
+<Row>
+      <Col md={1}>
+        <Menu />
+      </Col>
+      <Col md={11}>
         { children }
       </Col>
+      </Row>
     </Grid>
   </div>
 )

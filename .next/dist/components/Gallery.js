@@ -51,6 +51,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = '/home/vagrant/rialto-site/components/Gallery.js';
 
 
+var style = {
+  overflow: {
+    'overflow-y': 'scroll',
+    height: '800px'
+  },
+  full: {
+    width: '100%',
+    background: 'transparent',
+    color: '#fff',
+    'font-size': '2vw'
+  },
+  div: {
+    width: '100%',
+    background: '#353232',
+    height: '4vw',
+    padding: '10px',
+    'border-radius': '5px'
+  }
+};
+
 var _class = function (_Component) {
   (0, _inherits3.default)(_class, _Component);
 
@@ -63,53 +83,71 @@ var _class = function (_Component) {
       materials: [{
         img: '1.jpg',
         type: 1,
-        date: 'Сегодня в 18:03'
+        date: 'Сегодня в 18:03',
+        title: 'Тестовый тайтл'
       }, {
         img: '2.jpg',
         type: 2,
-        date: 'Сегодня в 17:59'
+        date: 'Сегодня в 17:59',
+        title: 'Тестовый тайтл'
       }, {
         img: '3.jpg',
         type: 2,
-        date: 'Сегодня в 17:51'
+        date: 'Сегодня в 17:51',
+        title: 'Тестовый тайтл'
       }, {
         img: '4.jpg',
         type: 3,
-        date: 'Сегодня в 16:20'
+        date: 'Сегодня в 16:20',
+        title: 'Тестовый тайтл'
       }, {
         img: '5.jpg',
         type: 2,
-        date: 'Сегодня в 15:39'
+        date: 'Сегодня в 15:39',
+        title: 'Тестовый тайтл'
       }, {
         img: '6.jpg',
         type: 2,
-        date: 'Сегодня в 14:20'
+        date: 'Сегодня в 14:20',
+        title: 'Тестовый тайтл'
       }, {
         img: '7.jpg',
         type: 3,
-        date: 'Сегодня в 14:08'
+        date: 'Сегодня в 14:08',
+        title: 'Тестовый тайтл'
       }, {
         img: '8.jpg',
         type: 2,
-        date: 'Сегодня в 12:50'
+        date: 'Сегодня в 12:50',
+        title: 'Тестовый тайтл'
       }, {
         img: '9.jpg',
         type: 2,
-        date: 'Сегодня в 11:04'
+        date: 'Сегодня в 11:04',
+        title: 'Тестовый тайтл'
       }, {
         img: '10.jpg',
         type: 2,
-        date: 'Сегодня в 11:02'
+        date: 'Сегодня в 11:02',
+        title: 'Тестовый тайтл'
       }, {
         img: '11.jpg',
         type: 2,
-        date: 'Сегодня в 10:59'
+        date: 'Сегодня в 10:59',
+        title: 'Тестовый тайтл'
       }, {
         img: '12.jpg',
         type: 2,
-        date: 'Сегодня в 10:45'
+        date: 'Сегодня в 10:45',
+        title: 'Тестовый тайтл'
       }],
-      tags: ['авария', 'кошмар']
+      tags: ['авария', 'кошмар'],
+      current: {
+        img: '12.jpg',
+        type: 2,
+        date: 'Сегодня в 10:45',
+        title: 'Тестовый тайтл'
+      }
     };
     return _this;
   }
@@ -120,59 +158,118 @@ var _class = function (_Component) {
       this.setState({ tags: tags });
     }
   }, {
+    key: 'setCurrent',
+    value: function setCurrent(current) {
+      this.setState({ current: current });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 127
         }
       }, _react2.default.createElement(_reactBootstrap.Row, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 128
         }
-      }, _react2.default.createElement(_reactBootstrap.Col, { md: 6, __source: {
+      }), _react2.default.createElement(_reactBootstrap.Row, {
+        __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 130
+        }
+      }, _react2.default.createElement(_reactBootstrap.Col, { md: 4, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        }
+      }, _react2.default.createElement('div', { style: style.overflow, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
         }
       }, this.state.materials.map(function (material) {
         return _react2.default.createElement(_GalleryItem2.default, (0, _extends3.default)({ key: Math.random() }, material, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91
+            lineNumber: 134
           }
         }));
-      })), _react2.default.createElement(_reactBootstrap.Col, { md: 6, __source: {
+      }))), _react2.default.createElement(_reactBootstrap.Col, { md: 5, __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 138
         }
-      }, _react2.default.createElement(_reactBootstrap.Col, { md: 12, __source: {
+      }, _react2.default.createElement('input', { type: 'text', value: this.state.current.title, style: style.full, __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 139
         }
-      }, '\u0422\u0430\u043A\u043E\u0435 \u0442\u043E \u0432\u0438\u0434\u0435\u043E \u0431\u043B\u0430 \u0431\u043B\u0430 \u0431\u043B\u0430', _react2.default.createElement(_reactTagsinput2.default, { value: this.state.tags, onChange: this.handleChange.bind(this), __source: {
+      }), _react2.default.createElement(_reactTagsinput2.default, { value: this.state.tags, onChange: this.handleChange.bind(this), __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 140
         }
-      }), _react2.default.createElement(_reactBootstrap.Image, { src: 'static/' + '12.jpg', __source: {
+      }), _react2.default.createElement(_reactBootstrap.Image, { src: 'static/' + this.state.current.img, __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 141
         }
       }), this.props.date, _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 143
         }
       }, _react2.default.createElement(_reactBootstrap.Button, { bsStyle: 'success', __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 144
         }
-      }, '\u041E\u0434\u043E\u0431\u0440\u0438\u0442\u044C'), '\xA0', _react2.default.createElement(_reactBootstrap.Button, { bsStyle: 'danger', __source: {
+      }, '\u041E\u0434\u043E\u0431\u0440\u0438\u0442\u044C'), '\xA0', _react2.default.createElement(_reactBootstrap.Button, { pullRight: true, bsStyle: 'danger', __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 145
         }
-      }, '\u041E\u0442\u043A\u0437\u0430\u0442\u044C'))))));
+      }, '\u041E\u0442\u043A\u0437\u0430\u0442\u044C'))), _react2.default.createElement(_reactBootstrap.Col, { md: 3, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 148
+        }
+      }, _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 149
+        }
+      }, _react2.default.createElement('div', { style: style.div, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 150
+        }
+      }, _react2.default.createElement(_reactBootstrap.Col, { md: 3, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 151
+        }
+      }, _react2.default.createElement(_reactBootstrap.Image, { src: '/static/default-userpic.png', circle: true, style: style.full, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 152
+        }
+      })), _react2.default.createElement(_reactBootstrap.Col, { md: 3, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154
+        }
+      }, _react2.default.createElement(_reactBootstrap.Image, { src: '/static/default-userpic.png', circle: true, style: style.full, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 155
+        }
+      })), _react2.default.createElement(_reactBootstrap.Col, { md: 3, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        }
+      }, _react2.default.createElement(_reactBootstrap.Image, { src: '/static/default-userpic.png', circle: true, style: style.full, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 158
+        }
+      })), _react2.default.createElement(_reactBootstrap.Col, { md: 3, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 160
+        }
+      }, _react2.default.createElement(_reactBootstrap.Image, { src: '/static/default-userpic.png', circle: true, style: style.full, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 161
+        }
+      })))))));
     }
   }]);
 
