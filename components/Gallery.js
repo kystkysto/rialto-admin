@@ -1,31 +1,27 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
-import { Col, Row, PageHeader, Image, Button, Well} from 'react-bootstrap'
+import { Col, Row, PageHeader, Image, Button, Well, Glyphicon} from 'react-bootstrap'
 import GalleryItem from './GalleryItem'
 import TagsInput from 'react-tagsinput'
 
 const style = {
-  overflow: {
-    'overflow-y': 'scroll',
-    height: '800px'
-  },
   full: {
     width: '100%',
     background: 'transparent',
     color: '#fff',
-    'font-size': '2vw'
+    fontSize: '2vw'
   },
   div: {
     width: '100%',
     background: '#353232',
-    height: '5vw',
+    height: '4vw',
     padding: '10px',
-    'border-radius': '5px'
-  },
-  ava: {
-    width: '100%',
-    height: '3vw'
+    borderRadius: '5px'
   }
+}
+
+const img = {
+  width: '2vw',
 }
 
 export default class extends Component {
@@ -132,41 +128,31 @@ export default class extends Component {
         <Row>
         </Row>
         <Row>
-          <Col md={4} >
-            <div style={style.overflow}>
+          <Col md={6} className={'left-side'} >
+            
               { this.state.materials.map(material => {
                 return <GalleryItem key={Math.random()} {...material} />
               }) }
-            </div>
+    
           </Col>
-          <Col md={5}>
-          <input type="text" value={this.state.current.title} style={style.full}></input>
-          <TagsInput value={this.state.tags} onChange={this.handleChange.bind(this)} />
-          <Image style={style.full} src={'static/' +  this.state.current.img}></Image>
-          {this.props.date}
+          <Col md={6}>
+            <input type="text" value="Страшная авария на кутузовском" style={style.full}></input>
+            <TagsInput value={this.state.tags} onChange={this.handleChange.bind(this)} />
+            <div>
+            <Glyphicon className="pull-right" glyph="ban-circle" />
+              <Image style={img}src="/static/default-userpic.png" circle />
+              <div>Иван +7 916 456 34 23</div>
+
+            </div>
+            <Image style={style.full} src={'static/' +  this.state.current.img}></Image>
+            <p>{this.props.date}</p>
           <div>                         
-            <Button bsStyle="success">Одобрить</Button>&nbsp;
-            <Button pullRight bsStyle="danger">Откзать</Button>
+            <Button bsStyle="success"><Glyphicon glyph="ok" /></Button>&nbsp;
+            <Button bsStyle="primary"><Glyphicon glyph="step-forward" /></Button>&nbsp;
+            <Button bsStyle="danger"><Glyphicon glyph="ban-circle" /></Button>
           </div>
           </Col>
-          <Col md={3}>
-            <div>
-              <div style={style.div}>
-                <Col md={3}>
-                  <Image src="/static/default-userpic.png" circle style={style.full}/>
-                </Col>
-                <Col md={3}>
-                  <Image src="/static/default-userpic.png" circle style={style.full}/>
-                </Col>
-                <Col md={3}>
-                  <Image src="/static/default-userpic.png" circle style={style.full}/>
-                </Col>
-                <Col md={3}>
-                  <Image src="/static/default-userpic.png" circle style={style.full}/>
-                </Col>
-              </div>
-            </div>
-          </Col>
+         
         </Row>
       </div>
     );

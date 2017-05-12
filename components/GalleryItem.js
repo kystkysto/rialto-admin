@@ -26,8 +26,8 @@ export default class extends Component {
     return (
       <Col md={6} key={Math.random()}>      
         <Thumbnail src={'static/' + this.props.img}>
-          <Glyphicon glyph={this.type(this.props.type)} />
-          <span style={txt}>{this.props.date}</span>
+          <p style={txt}><Glyphicon glyph={this.type(this.props.type)} />  
+          <span className="pull-right">{this.props.date}</span></p>
         </Thumbnail>
       </Col>
     );

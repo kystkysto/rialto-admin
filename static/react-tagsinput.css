@@ -1,5 +1,10 @@
 body { padding-top: 30px; }
 
+.thumbnail {
+    display: block;
+    border: none !important;
+  }
+
 .react-tagsinput {
 /*  background-color: #fff;
   border: 1px solid #ccc;*/

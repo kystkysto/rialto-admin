@@ -7,8 +7,12 @@ const img = {
 }
 
 const icon = {
-  'font-size': '3vw',
-  'padding': '2px'
+  fontSize: '2vw',
+  textAllign: 'center'
+}
+
+const a = {
+  textAlign: 'center'
 }
 
 export default class extends Component {
@@ -26,17 +30,17 @@ export default class extends Component {
           <Nav bsStyle="pills" stacked activeKey={1} >
             
             <Link href="/">
-              <NavItem  eventKey={1}><Image className={'center-block'} src="/static/logo.png" style={img}></Image></NavItem>
+              <NavItem  eventKey={1}><Image  style={img} className={'center-block'} src="/static/logo.png"></Image></NavItem>
             </Link>
             
-            <Link href="/">
-              <NavItem  eventKey={1}><Glyphicon  style={icon} glyph={'th'} /></NavItem>
+            <Link  href="/">
+              <NavItem style={a} eventKey={1}><Glyphicon  style={icon} glyph={'th'} /></NavItem>
             </Link>
             <Link href="/transactions">
-              <NavItem eventKey={2}><Glyphicon style={icon} glyph={'rub'} /></NavItem>
+              <NavItem style={a} eventKey={2}><Glyphicon style={icon} glyph={'rub'} /></NavItem>
             </Link>
-            <Link href="/users">
-              <NavItem eventKey={3}><Glyphicon style={icon} glyph={'user'} /></NavItem>
+            <Link  href="/users">
+              <NavItem style={a} eventKey={3}><Glyphicon style={icon} glyph={'user'} /></NavItem>
             </Link>
           </Nav>
       </div>
