@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Link from 'next/link'
 import { Col, Glyphicon, Thumbnail} from 'react-bootstrap';
 
+const txt = {
+  fontSize: '1vw'
+}
+
 const style = {
 
   position: 'absolute',
@@ -20,13 +24,11 @@ export default class extends Component {
   
   render() {
     return (
-      <Col md={6} key={Math.random()}>
-        <Link href={'/material?id=' + 1}>
-          <Thumbnail src={'static/' + this.props.img}>
-            <Glyphicon style={style} glyph={this.type(this.props.type)} />
-            {this.props.date}
-          </Thumbnail>
-        </Link>
+      <Col md={6} key={Math.random()}>      
+        <Thumbnail src={'static/' + this.props.img}>
+          <Glyphicon glyph={this.type(this.props.type)} />
+          <span style={txt}>{this.props.date}</span>
+        </Thumbnail>
       </Col>
     );
   }

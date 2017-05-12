@@ -1,4 +1,4 @@
-import { Grid, Col, Nav, NavItem, Row, Navbar} from 'react-bootstrap';
+import { Grid, Col, Nav, NavItem, Row, Navbar, Image} from 'react-bootstrap';
 import Link from 'next/link'
 import Head from 'next/head'
 import Bar from './Bar'
@@ -18,8 +18,6 @@ export default ({ children, title = 'Модератор' }) => (
       <link rel="stylesheet" href="/static/react-tagsinput.css" />  
     </Head>
     <Grid fluid>
-      <Row>
-      </Row>
 <Row>
       <Col md={1}>
         <Menu />

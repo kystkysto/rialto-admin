@@ -16,11 +16,15 @@ const style = {
     'font-size': '2vw'
   },
   div: {
-        width: '100%',
+    width: '100%',
     background: '#353232',
-    height: '4vw',
+    height: '5vw',
     padding: '10px',
     'border-radius': '5px'
+  },
+  ava: {
+    width: '100%',
+    height: '3vw'
   }
 }
 
@@ -138,7 +142,7 @@ export default class extends Component {
           <Col md={5}>
           <input type="text" value={this.state.current.title} style={style.full}></input>
           <TagsInput value={this.state.tags} onChange={this.handleChange.bind(this)} />
-          <Image src={'static/' +  this.state.current.img}></Image>
+          <Image style={style.full} src={'static/' +  this.state.current.img}></Image>
           {this.props.date}
           <div>                         
             <Button bsStyle="success">Одобрить</Button>&nbsp;
